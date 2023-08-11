@@ -1,0 +1,5 @@
+ezdxf==1.0.3
+pyparsing==3.0.9
+pypng==0.20220715.0
+qrcode==7.4.2
+typing_extensions==4.6.3
