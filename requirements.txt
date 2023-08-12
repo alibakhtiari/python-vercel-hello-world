@@ -6,7 +6,7 @@ multidict==6.0.4
 pyparsing==3.0.9
 pypng==0.20220715.0
 qrcode==7.4.2
-sanic==23.6.0
+sanic==23.3.0
 sanic-routing==23.6.0
 tracerite==1.1.0
 typing_extensions==4.6.3
