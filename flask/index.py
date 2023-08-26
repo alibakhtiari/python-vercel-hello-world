@@ -19,7 +19,7 @@ def generate_dxf():
 
         # Generate QR code
         qr = qrcode.QRCode(
-            version=1,
+            version=10,
             error_correction=qrcode.constants.ERROR_CORRECT_L,
             box_size=10,
             border=4,
@@ -38,8 +38,8 @@ def generate_dxf():
             for x in range(qr_size):
                 if qr_matrix[y][x]:
                     msp.add_polyline2d(
-                        [(x, y), (x + 1, y), (x + 1, y + 1), (x, y + 1), (x, y)],
-                        dxfattribs={"layer": "QRCode"},
+                        [(x+10, y), (x+10 + 1, y), (x+10 + 1, y + 1), (x+10, y + 1), (x+10, y)],
+                        dxfattribs={"layer": "QRCode","insert": (720, 550)},
                     )
 
         # Add text to the DXF file
@@ -49,7 +49,7 @@ def generate_dxf():
             dxfattribs={
                 "layer": "Text",
                 "style": text_style,
-                "height": 40,
+                "height": 30,
                 "insert": (720, 550),
             },
         )
